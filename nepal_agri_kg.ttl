@@ -1,0 +1,221 @@
+@prefix ex: <http://agrinep.org/nepal-agri#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Crop_Barley a ex:Crop ;
+    rdfs:label "Barley" ;
+    ex:climate "Cold, Dry" ;
+    ex:droughtTolerance "High" ;
+    ex:farmingType "Rain-fed" ;
+    ex:floodTolerance "Low" ;
+    ex:grownIn ex:Region_Mountains ;
+    ex:inputRequirement "Low" ;
+    ex:regions "Mountains" ;
+    ex:scientificName "Hordeum vulgare" ;
+    ex:soilType "Light soils" ;
+    ex:succeptibleTo ex:Disease_Barley_Smut,
+        ex:Disease_Leaf_Rust,
+        ex:Disease_Powdery_Mildew .
+
+ex:Crop_Maize a ex:Crop ;
+    rdfs:label "Maize" ;
+    ex:climate "Warm, Moderate Rain" ;
+    ex:droughtTolerance "Medium" ;
+    ex:farmingType "Rain-fed" ;
+    ex:floodTolerance "Low" ;
+    ex:grownIn ex:Region_Hills,
+        ex:Region_Terai ;
+    ex:inputRequirement "Medium" ;
+    ex:regions "Hills, Terai" ;
+    ex:scientificName "Zea mays" ;
+    ex:soilType "Loamy, Well-drained" ;
+    ex:succeptibleTo ex:Disease_Downy_Mildew,
+        ex:Disease_Leaf_Blight,
+        ex:Disease_Maize_Smut .
+
+ex:Crop_Millet a ex:Crop ;
+    rdfs:label "Millet" ;
+    ex:climate "Semi-arid, Dry" ;
+    ex:droughtTolerance "High" ;
+    ex:farmingType "Rain-fed" ;
+    ex:floodTolerance "Low" ;
+    ex:grownIn ex:Region_Hills,
+        ex:Region_Mountains ;
+    ex:inputRequirement "Low" ;
+    ex:regions "Hills, Mountains" ;
+    ex:scientificName "Eleusine coracana" ;
+    ex:soilType "Poor, Marginal" ;
+    ex:succeptibleTo ex:Disease_Millet_Blast,
+        ex:Disease_Smut .
+
+ex:Crop_Rice a ex:Crop ;
+    rdfs:label "Rice" ;
+    ex:climate "Warm, Humid" ;
+    ex:droughtTolerance "Low" ;
+    ex:farmingType "Irrigated" ;
+    ex:floodTolerance "High" ;
+    ex:grownIn ex:Region_Hills,
+        ex:Region_Terai ;
+    ex:inputRequirement "High" ;
+    ex:regions "Terai, Hills" ;
+    ex:scientificName "Oryza sativa" ;
+    ex:soilType "Clayey, Alluvial" ;
+    ex:succeptibleTo ex:Disease_Bacterial_Leaf_Blight,
+        ex:Disease_Rice_Blast,
+        ex:Disease_Sheath_Blight .
+
+ex:Crop_Wheat a ex:Crop ;
+    rdfs:label "Wheat" ;
+    ex:climate "Cool, Dry" ;
+    ex:droughtTolerance "Medium" ;
+    ex:farmingType "Irrigated" ;
+    ex:floodTolerance "Low" ;
+    ex:grownIn ex:Region_Terai ;
+    ex:inputRequirement "Medium" ;
+    ex:regions "Terai, Inner Terai" ;
+    ex:scientificName "Triticum aestivum" ;
+    ex:soilType "Loamy" ;
+    ex:succeptibleTo ex:Disease_Leaf_Blight,
+        ex:Disease_Powdery_Mildew,
+        ex:Disease_Rust_\(Yellow_Stem\) .
+
+ex:Treatment_Bacterial_Leaf_Blight_Cultural a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Crop rotation" .
+
+ex:Treatment_Barley_Smut_Cultural a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Seed treatment" .
+
+ex:Treatment_Downy_Mildew_Biological a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Resistant seeds" .
+
+ex:Treatment_Leaf_Blight_Chemical a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Fungicide spray" .
+
+ex:Treatment_Maize_Smut_Cultural a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Remove infected plants" .
+
+ex:Treatment_Millet_Blast_Biological a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Resistant varieties" .
+
+ex:Treatment_Powdery_Mildew_Chemical a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Sulfur-based sprays" .
+
+ex:Treatment_Rice_Blast_Biological a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Resistant varieties" .
+
+ex:Treatment_Rice_Blast_Chemical a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Fungicide application" .
+
+ex:Treatment_Sheath_Blight_Cultural a ex:Treatment ;
+    rdfs:label "treatment_type" ;
+    ex:methodDescription "Reduce plant density" .
+
+ex:Disease_Bacterial_Leaf_Blight a ex:Disease ;
+    rdfs:label "Bacterial Leaf Blight" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Bacterial" ;
+    ex:notes "Common in humid regions" ;
+    ex:severity "High" .
+
+ex:Disease_Barley_Smut a ex:Disease ;
+    rdfs:label "Barley Smut" ;
+    ex:affectedPart "Grains" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Occasional" ;
+    ex:severity "Low" .
+
+ex:Disease_Downy_Mildew a ex:Disease ;
+    rdfs:label "Downy Mildew" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Moist conditions" ;
+    ex:severity "Medium" .
+
+ex:Disease_Leaf_Rust a ex:Disease ;
+    rdfs:label "Leaf Rust" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Yield reduction" ;
+    ex:severity "Medium" .
+
+ex:Disease_Maize_Smut a ex:Disease ;
+    rdfs:label "Maize Smut" ;
+    ex:affectedPart "Ears" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Common in hills" ;
+    ex:severity "Medium" .
+
+ex:Disease_Millet_Blast a ex:Disease ;
+    rdfs:label "Millet Blast" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Similar to rice blast" ;
+    ex:severity "Medium" .
+
+ex:Disease_Rice_Blast a ex:Disease ;
+    rdfs:label "Rice Blast" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Major yield loss in Nepal" ;
+    ex:severity "High" .
+
+ex:Disease_Rust_\(Yellow_Stem\) a ex:Disease ;
+    rdfs:label "Rust (Yellow/Stem)" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Major wheat threat" ;
+    ex:severity "High" .
+
+ex:Disease_Sheath_Blight a ex:Disease ;
+    rdfs:label "Sheath Blight" ;
+    ex:affectedPart "Stem" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Dense planting risk" ;
+    ex:severity "Medium" .
+
+ex:Disease_Smut a ex:Disease ;
+    rdfs:label "Smut" ;
+    ex:affectedPart "Grains" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Less severe" ;
+    ex:severity "Low" .
+
+ex:Disease_Leaf_Blight a ex:Disease ;
+    rdfs:label "Leaf Blight" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Affects yield",
+        "Warm regions" ;
+    ex:severity "Medium" .
+
+ex:Disease_Powdery_Mildew a ex:Disease ;
+    rdfs:label "Powdery Mildew" ;
+    ex:affectedPart "Leaves" ;
+    ex:diseaseType "Fungal" ;
+    ex:notes "Common disease",
+        "Cool climates" ;
+    ex:severity "Medium" .
+
+ex:Region_Mountains a ex:Region ;
+    rdfs:label "Mountains" ;
+    ex:climateType "Cold, Dry" ;
+    ex:notes "Harsh conditions" .
+
+ex:Region_Hills a ex:Region ;
+    rdfs:label "Hills" ;
+    ex:climateType "Subtropical" ;
+    ex:notes "Rain-fed farming" .
+
+ex:Region_Terai a ex:Region ;
+    rdfs:label "Terai" ;
+    ex:climateType "Tropical, Humid" ;
+    ex:notes "Fertile plains" .
+
