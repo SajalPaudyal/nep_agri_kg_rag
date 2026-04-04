@@ -1,0 +1,6 @@
+Agent_ID,Agent_Name,Target_Disease_ID,Method,Notes
+B01,Trichoderma harzianum,D11,Soil Drenching,Effective against Club Root in Cauliflower
+B02,Trichoderma viride,D05,Soil Application,Controls Banded Leaf Sheath Blight
+B03,Paecilomyces lilacinus,Nematode_Tomato,Soil Application,Effective against Root Knot Nematode
+B04,Pseudomonas fluorescens,D11,Soil Application,Biocontrol for Club Root
+B05,Mustard Cake,Nematode_Tomato,Soil Amendment,250gm per square meter

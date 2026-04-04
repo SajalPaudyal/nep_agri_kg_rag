@@ -1,0 +1,12 @@
+Disease_ID,Disease_Name,Crop_ID,Pathogen_Name,Severity,Notes
+D01,Blast,C01,Pyricularia oryzae,High,"Significant yield loss, requires resistant varieties"
+D02,Bacterial Leaf Blight,C01,Xanthomonas oryzae,High,"Humid regions, water management crucial"
+D03,Yellow Rust,C02,Puccinia striiformis,High,Major threat in wheat belts
+D04,Leaf Rust,C02,Puccinia triticina,High,Resistant genotypes available
+D05,Gray Leaf Spot,C03,Cercospora zeae maydis,High,High humidity areas
+D06,Northern Leaf Blight,C03,Exserohilum turcicum,Medium,Exotic lines show resistance
+D07,Late Blight,C04,Phytophthora infestans,High,Destructive in high humidity
+D08,Powdery Scab,C04,Spongospora subterranea,Medium,Tuber quality issue
+D09,Bacterial Wilt,C05,Ralstonia solanacearum,High,"Soil borne, very hard to control"
+D10,Leaf Curl Virus,C05,ToLCV,High,Vector transmitted
+D11,Club Root,C06,Plasmodiophora brassicae,High,"Soil borne, causes swelling"

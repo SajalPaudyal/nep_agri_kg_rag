@@ -1,0 +1,4 @@
+Zone_ID,Zone_Name,Altitude_Range_Meters,Climate_Type,Typical_Soil
+Z1, Terai,60-300,"Tropical, Subtropical","Alluvial, Clayey"
+Z2, Mid_Hills,300-2000,Warm Temperature,Sandy Loam
+Z3, High_Hills,2000-4000,Cool Temperature,Sedimentary

@@ -1,0 +1,250 @@
+@prefix ex: <http://narc.org/agri_knowledge#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Crop_C01 a ex:Crop ;
+    rdfs:label "Rice" ;
+    ex:scientificName "Oryza sativa" ;
+    ex:season "Monsoon" ;
+    ex:succeptibleTo ex:DiseaseD01,
+        ex:DiseaseD02 ;
+    ex:suitableIn ex:Zone_Z1,
+        ex:Zone_Z2 .
+
+ex:Crop_C02 a ex:Crop ;
+    rdfs:label "Wheat" ;
+    ex:scientificName "Triticum aestivum" ;
+    ex:season "Winter" ;
+    ex:succeptibleTo ex:DiseaseD03,
+        ex:DiseaseD04 ;
+    ex:suitableIn ex:Zone_Z1,
+        ex:Zone_Z2 .
+
+ex:Crop_C03 a ex:Crop ;
+    rdfs:label "Maize" ;
+    ex:scientificName "Zea mays" ;
+    ex:season "Spring" ;
+    ex:succeptibleTo ex:DiseaseD05,
+        ex:DiseaseD06 ;
+    ex:suitableIn ex:Zone_Z1,
+        ex:Zone_Z2 .
+
+ex:Crop_C04 a ex:Crop ;
+    rdfs:label "Potato" ;
+    ex:scientificName "Solanum tuberosum" ;
+    ex:season "Winter, Spring" ;
+    ex:succeptibleTo ex:DiseaseD07,
+        ex:DiseaseD08 ;
+    ex:suitableIn ex:Zone_Z2 .
+
+ex:Crop_C05 a ex:Crop ;
+    rdfs:label "Tomato" ;
+    ex:scientificName "Solanum lycopersicum" ;
+    ex:season "Winter" ;
+    ex:succeptibleTo ex:DiseaseD09,
+        ex:DiseaseD10 ;
+    ex:suitableIn ex:Zone_Z2 .
+
+ex:Crop_C06 a ex:Crop ;
+    rdfs:label "Cauliflower" ;
+    ex:scientificName "Brassica oleracea" ;
+    ex:season "Winter" ;
+    ex:succeptibleTo ex:DiseaseD11 ;
+    ex:suitableIn ex:Zone_Z2 .
+
+ex:Zone_Z3 a ex:Zone ;
+    rdfs:label " High_Hills" ;
+    ex:altitudeRange "2000-4000" ;
+    ex:climateType "Cool Temperature" ;
+    ex:typicalSoil "Sedimentary" .
+
+ex:DiseaseD01 a ex:Disease ;
+    rdfs:label "Blast" ;
+    ex:hasSolution ex:SolutionS01,
+        ex:SolutionS02,
+        ex:SolutionS03,
+        ex:SolutionS07,
+        ex:SolutionS08 ;
+    ex:notes "Significant yield loss, requires resistant varieties" ;
+    ex:pathogenName "Pyricularia oryzae" ;
+    ex:severity "High" .
+
+ex:DiseaseD02 a ex:Disease ;
+    rdfs:label "Bacterial Leaf Blight" ;
+    ex:notes "Humid regions, water management crucial" ;
+    ex:pathogenName "Xanthomonas oryzae" ;
+    ex:severity "High" .
+
+ex:DiseaseD03 a ex:Disease ;
+    rdfs:label "Yellow Rust" ;
+    ex:hasSolution ex:SolutionS04,
+        ex:SolutionS09 ;
+    ex:notes "Major threat in wheat belts" ;
+    ex:pathogenName "Puccinia striiformis" ;
+    ex:severity "High" .
+
+ex:DiseaseD04 a ex:Disease ;
+    rdfs:label "Leaf Rust" ;
+    ex:hasSolution ex:SolutionS05 ;
+    ex:notes "Resistant genotypes available" ;
+    ex:pathogenName "Puccinia triticina" ;
+    ex:severity "High" .
+
+ex:DiseaseD05 a ex:Disease ;
+    rdfs:label "Gray Leaf Spot" ;
+    ex:hasSolution ex:SolutionS06,
+        ex:SolutionS10 ;
+    ex:notes "High humidity areas" ;
+    ex:pathogenName "Cercospora zeae maydis" ;
+    ex:severity "High" .
+
+ex:DiseaseD06 a ex:Disease ;
+    rdfs:label "Northern Leaf Blight" ;
+    ex:notes "Exotic lines show resistance" ;
+    ex:pathogenName "Exserohilum turcicum" ;
+    ex:severity "Medium" .
+
+ex:DiseaseD07 a ex:Disease ;
+    rdfs:label "Late Blight" ;
+    ex:notes "Destructive in high humidity" ;
+    ex:pathogenName "Phytophthora infestans" ;
+    ex:severity "High" .
+
+ex:DiseaseD08 a ex:Disease ;
+    rdfs:label "Powdery Scab" ;
+    ex:hasSolution ex:SolutionS13,
+        ex:SolutionS14 ;
+    ex:notes "Tuber quality issue" ;
+    ex:pathogenName "Spongospora subterranea" ;
+    ex:severity "Medium" .
+
+ex:DiseaseD09 a ex:Disease ;
+    rdfs:label "Bacterial Wilt" ;
+    ex:hasSolution ex:SolutionS11,
+        ex:SolutionS16 ;
+    ex:notes "Soil borne, very hard to control" ;
+    ex:pathogenName "Ralstonia solanacearum" ;
+    ex:severity "High" .
+
+ex:DiseaseD10 a ex:Disease ;
+    rdfs:label "Leaf Curl Virus" ;
+    ex:hasSolution ex:SolutionS15 ;
+    ex:notes "Vector transmitted" ;
+    ex:pathogenName "ToLCV" ;
+    ex:severity "High" .
+
+ex:DiseaseD11 a ex:Disease ;
+    rdfs:label "Club Root" ;
+    ex:hasSolution ex:SolutionS12 ;
+    ex:notes "Soil borne, causes swelling" ;
+    ex:pathogenName "Plasmodiophora brassicae" ;
+    ex:severity "High" .
+
+ex:SolutionS01 a ex:Solution ;
+    rdfs:label "Tricyclazole" ;
+    ex:Description "Standard fungicide for blast" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Spraying" .
+
+ex:SolutionS02 a ex:Solution ;
+    rdfs:label "Propiconazole (Tilt)" ;
+    ex:Description "Effective for blast & sheath blight" ;
+    ex:dosage "1ml per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS03 a ex:Solution ;
+    rdfs:label "Carbendazim (Bavistin)" ;
+    ex:Description "7-10 days interval" ;
+    ex:dosage "1.5g per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS04 a ex:Solution ;
+    rdfs:label "Mancozeb (Dithane M-45)" ;
+    ex:Description "Protective fungicide for rust" ;
+    ex:dosage "2.5g per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS05 a ex:Solution ;
+    rdfs:label "Propiconazole (Tilt)" ;
+    ex:Description "Effective for leaf rust" ;
+    ex:dosage "1ml per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS06 a ex:Solution ;
+    rdfs:label "Carbendazim (Bavistin)" ;
+    ex:Description "7-10 days interval" ;
+    ex:dosage "1.5g per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS07 a ex:Solution ;
+    rdfs:label "Chandannath-1" ;
+    ex:Description "Resistant genotype for Hills" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS08 a ex:Solution ;
+    rdfs:label "Khumal-10" ;
+    ex:Description "Resistant genotype" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS09 a ex:Solution ;
+    rdfs:label "Pasang Lhamu" ;
+    ex:Description "Resistant to Yellow Rust" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS10 a ex:Solution ;
+    rdfs:label "Manakamana-1" ;
+    ex:Description "Resistant to Gray Leaf Spot" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS11 a ex:Solution ;
+    rdfs:label "N-162" ;
+    ex:Description "Resistant to Bacterial Wilt" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS12 a ex:Solution ;
+    rdfs:label "Clapton-A" ;
+    ex:Description "Resistant to Club Root" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "Planting" .
+
+ex:SolutionS13 a ex:Solution ;
+    rdfs:label "Amisulbrom (Nekobu)" ;
+    ex:Description "Tuber treatment before planting" ;
+    ex:dosage "5% solution 30 mins" ;
+    ex:method "Dipping" .
+
+ex:SolutionS14 a ex:Solution ;
+    rdfs:label "Fluazinam (Huront)" ;
+    ex:Description "Tuber treatment before planting" ;
+    ex:dosage "5% solution 30 mins" ;
+    ex:method "Dipping" .
+
+ex:SolutionS15 a ex:Solution ;
+    rdfs:label "Cow Milk" ;
+    ex:Description "3-5 days interval" ;
+    ex:dosage "25ml per litre" ;
+    ex:method "Spraying" .
+
+ex:SolutionS16 a ex:Solution ;
+    rdfs:label "Crop Rotation" ;
+    ex:Description "Avoid solanaceous crops,Reduces soil bacteria" ;
+    ex:dosage "NaN"^^xsd:double ;
+    ex:method "NaN"^^xsd:double .
+
+ex:Zone_Z1 a ex:Zone ;
+    rdfs:label " Terai" ;
+    ex:altitudeRange "60-300" ;
+    ex:climateType "Tropical, Subtropical" ;
+    ex:typicalSoil "Alluvial, Clayey" .
+
+ex:Zone_Z2 a ex:Zone ;
+    rdfs:label " Mid_Hills" ;
+    ex:altitudeRange "300-2000" ;
+    ex:climateType "Warm Temperature" ;
+    ex:typicalSoil "Sandy Loam" .
+

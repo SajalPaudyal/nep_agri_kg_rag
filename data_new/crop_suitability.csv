@@ -1,0 +1,10 @@
+Crop_ID,Zone_ID,Suitability_Status,Season
+C01,Z1,Highly Suitable,Monsoon
+C01,Z2,Suitable,Monsoon
+C02,Z1,Suitable,Winter
+C02,Z2,Suitable,Winter
+C03,Z1,Suitable,Spring
+C03,Z2,Suitable,Spring
+C04,Z2,Highly Suitable,"Winter, Spring"
+C05,Z2,Highly Suitable,Winter
+C06,Z2,Highly Suitable,Winter

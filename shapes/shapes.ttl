@@ -1,0 +1,2 @@
+@prefix ex: <http://narc.org/agri-knowledge#> .
+@prefix ex: <http://www.w3.org/ns/shacl#>.

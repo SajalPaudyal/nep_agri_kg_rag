@@ -1,0 +1,17 @@
+Solution_ID,Type,Target_Disease_ID,Agent_Name,Dosage,Method,Description
+S01,Chemical,D01,Tricyclazole,,Spraying,Standard fungicide for blast
+S02,Chemical,D01,Propiconazole (Tilt),1ml per litre,Spraying,Effective for blast & sheath blight
+S03,Chemical,D01,Carbendazim (Bavistin),1.5g per litre,Spraying,7-10 days interval
+S04,Chemical,D03,Mancozeb (Dithane M-45),2.5g per litre,Spraying,Protective fungicide for rust
+S05,Chemical,D04,Propiconazole (Tilt),1ml per litre,Spraying,Effective for leaf rust
+S06,Chemical,D05,Carbendazim (Bavistin),1.5g per litre,Spraying,7-10 days interval
+S07,Variety,D01,Chandannath-1,,Planting,Resistant genotype for Hills
+S08,Variety,D01,Khumal-10,,Planting,Resistant genotype
+S09,Variety,D03,Pasang Lhamu,,Planting,Resistant to Yellow Rust
+S10,Variety,D05,Manakamana-1,,Planting,Resistant to Gray Leaf Spot
+S11,Variety,D09,N-162,,Planting,Resistant to Bacterial Wilt
+S12,Variety,D11,Clapton-A,,Planting,Resistant to Club Root
+S13,Chemical,D08,Amisulbrom (Nekobu),5% solution 30 mins,Dipping,Tuber treatment before planting
+S14,Chemical,D08,Fluazinam (Huront),5% solution 30 mins,Dipping,Tuber treatment before planting
+S15,Botanical,D10,Cow Milk,25ml per litre,Spraying,3-5 days interval
+S16,Cultural,D09,Crop Rotation,,,"Avoid solanaceous crops,Reduces soil bacteria"
