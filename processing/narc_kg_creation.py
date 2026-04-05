@@ -23,6 +23,22 @@ disease_uris = {}
 solution_uris = {}
 
 
+def parse_attitude_range(alt_str):
+    try:
+        alt_str = str(alt_str).strip()
+        if "-" in alt_str:
+            parts = alt_str.split("-")
+            min_alt = int(parts[0].strip())
+            max_alt = int(parts[1].strip())
+            return min_alt, max_alt
+        else:
+            val = int(alt_str)
+            return val, val
+    except (ValueError, AttributeError):
+        print(f"Could not parse the string into integer for {alt_str}")
+        return None, None
+
+
 ## Adding Zones
 df_zones = pd.read_csv("data_new/nepal_zone.csv")
 df_zones.columns = df_zones.columns.str.strip()
@@ -36,6 +52,12 @@ for index, row in df_zones.iterrows():
     g.add((zone_uri, EX.altitudeRange, Literal(row["Altitude_Range_Meters"])))
     g.add((zone_uri, EX.climateType, Literal(row["Climate_Type"])))
     g.add((zone_uri, EX.typicalSoil, Literal(row["Typical_Soil"])))
+
+    min_altitude, max_altitude = parse_attitude_range(row["Altitude_Range_Meters"])
+    if min_altitude is not None:
+        g.add((zone_uri, EX.minAltitude, Literal(min_altitude, datatype=XSD.integer)))
+    if max_altitude is not None:
+        g.add((zone_uri, EX.maxAltitude, Literal(max_altitude, datatype=XSD.integer)))
 
 ## Adding Crops
 
@@ -53,8 +75,7 @@ for index, row in df_crops.iterrows():
 ## Adding Suitability
 
 df_suitability = pd.read_csv("data_new/crop_suitability.csv")
-df_suitability.colums = df_suitability.columns.str.strip()
-
+df_suitability.columns = df_suitability.columns.str.strip()
 for index, row in df_suitability.iterrows():
     crop_uri = crop_uris.get(row["Crop_ID"])
     zone_uri = zone_uris.get(row["Zone_ID"])
@@ -83,7 +104,7 @@ for index, row in df_pathology.iterrows():
     parent_crop_uri = crop_uris.get(row["Crop_ID"])
 
     if parent_crop_uri:
-        g.add((parent_crop_uri, EX.succeptibleTo, disease_uri))
+        g.add((parent_crop_uri, EX.susceptibleTo, disease_uri))
 
 ## Solution addition
 df_solution = pd.read_csv("data_new/narc_solution.csv")
@@ -95,9 +116,10 @@ for index, row in df_solution.iterrows():
 
     g.add((solution_uri, RDF.type, EX.Solution))
     g.add((solution_uri, RDFS.label, Literal(row["Agent_Name"])))
+    g.add((solution_uri, EX.type, Literal(row["Type"])))
     g.add((solution_uri, EX.dosage, Literal(row["Dosage"])))
     g.add((solution_uri, EX.method, Literal(row["Method"])))
-    g.add((solution_uri, EX.Description, Literal((row["Description"]))))
+    g.add((solution_uri, EX.description, Literal((row["Description"]))))
 
     target_id = row["Target_Disease_ID"]
     parent_disease_uri = disease_uris.get(target_id)
